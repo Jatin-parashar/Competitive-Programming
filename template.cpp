@@ -28,14 +28,9 @@ using namespace std;
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;        // ordered_set
 typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> mpbds; // ordered_multiset
 
-int gcd(int a, int b)
-{
-    return b == 0 ? a : gcd(b, a % b);
-}
-
 int lcm(int a, int b)
 {
-    return (a / gcd(a, b)) * b;
+    return (a / __gcd(a, b)) * b;
 }
 int fact(int n)
 {
